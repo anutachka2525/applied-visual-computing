@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Structured Grid Formulas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>3D Structured Grid</h1>
+
+    <div>
+      <label>nx <input id="nx" type="number" min="2" max="8" value="4" /></label>
+      <label>ny <input id="ny" type="number" min="2" max="8" value="3" /></label>
+      <label>nz <input id="nz" type="number" min="2" max="8" value="5" /></label>
+    </div>
+
+    <svg id="grid-svg" width="700" height="420" viewBox="0 0 700 420"></svg>
+
+    <div>
+      <h2>Formulas</h2>
+      <ol>
+        <li><strong>(a) Grid points:</strong> <span id="points-formula">n<sub>x</sub> × n<sub>y</sub> × n<sub>z</sub></span></li>
+        <li><strong>(b) Grid lines:</strong> <span id="lines-formula">(n<sub>x</sub>-1) n<sub>y</sub> n<sub>z</sub> + n<sub>x</sub> (n<sub>y</sub>-1) n<sub>z</sub> + n<sub>x</sub> n<sub>y</sub> (n<sub>z</sub>-1)</span></li>
+        <li><strong>(c) Grid faces:</strong> <span id="faces-formula">(n<sub>x</sub>-1) n<sub>y</sub> n<sub>z</sub> + n<sub>x</sub> (n<sub>y</sub>-1) n<sub>z</sub> + n<sub>x</sub> n<sub>y</sub> (n<sub>z</sub>-1)</span></li>
+        <li><strong>(d) Grid voxels:</strong> <span id="voxels-formula">(n<sub>x</sub>-1)(n<sub>y</sub>-1)(n<sub>z</sub>-1)</span></li>
+      </ol>
+    </div>
+
+    <div>
+      <h2>Computed values</h2>
+      <p id="result-text"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
