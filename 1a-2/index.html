@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OECD Income Distribution Database</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>OECD Income Distribution Database</h1>
+    <p>Source: OECD Income Distribution Database (Gini coefficient, disposable income, current definition).</p>
+
+    <p>
+      The Gini coefficient measures income inequality within a country. It ranges from 0 to 1, where 0 means perfect equality
+      (everyone has the same income) and 1 means maximum inequality (one person receives all income). Values closer to 1 indicate
+      a more unequal income distribution.
+    </p>
+
+    <h2>Scatter plot</h2>
+    <svg id="scatterChart" width="760" height="360"></svg>
+
+    <h2>Bar chart</h2>
+    <svg id="barChart" width="760" height="360"></svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
